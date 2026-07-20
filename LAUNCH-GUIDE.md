@@ -40,44 +40,58 @@ If you get stuck at any step, message me and we'll walk through it together.
 **To update the site later:** open your site in Netlify → **Deploys** tab →
 drag the new folder into the page. The site updates in seconds.
 
-## Step 3 — Buy your domain on GoDaddy (10 min)
+## Step 3 — Your domain ✓ (already done)
 
-1. Go to **godaddy.com**, create an account.
-2. Search for the domain (recommendation: **frankslandreport.com**).
-3. Buy it — usually $12–20/year. Skip all the add-ons GoDaddy offers at
-   checkout (hosting, email, "protection" upsells) — you don't need them.
+You already own **frankslandreport.com** on Namecheap — that's all this step
+needed. (Namecheap works exactly the same as any other registrar for our
+purposes.)
 
 ## Step 4 — Connect the domain to the site (10 min)
 
 **In Netlify:**
 
 1. Open your site → **Domain management** → **Add a domain**.
-2. Type your domain (e.g. `frankslandreport.com`) → **Add domain**.
+2. Type `frankslandreport.com` → **Add domain**.
    Netlify will say "Check DNS configuration" — that's expected, keep going.
 
-**In GoDaddy:**
+**In Namecheap:**
 
-3. My Products → your domain → **Manage DNS**.
-4. Find the row: **Type A, Name @** → click edit → change the value to:
-   `75.2.60.5` → Save.
-5. Find the row: **Type CNAME, Name www** → click edit → change the value to
-   your Netlify address (e.g. `frankslandreport.netlify.app`) → Save.
-   If there's no such row, click **Add New Record** and create it.
+3. Sign in → **Domain List** → next to frankslandreport.com click **Manage**.
+4. Open the **Advanced DNS** tab.
+5. Delete the default records Namecheap put there (usually a "CNAME www →
+   parkingpage..." and a "URL Redirect" record).
+6. Click **Add New Record** twice and create these two:
+   - **A Record** · Host: `@` · Value: `75.2.60.5` · TTL: Automatic
+   - **CNAME Record** · Host: `www` · Value: your Netlify address
+     (e.g. `frankslandreport.netlify.app`) · TTL: Automatic
+7. Save all changes (the green check marks next to each row).
 
 **Back in Netlify:**
 
-6. Wait 10–30 minutes (DNS changes take a little time), then on the Domain
+8. Wait 10–30 minutes (DNS changes take a little time), then on the Domain
    management page click **Verify** / **Retry DNS verification**.
-7. Netlify will automatically issue the HTTPS certificate (the padlock).
+9. Netlify will automatically issue the HTTPS certificate (the padlock).
    When the domain shows a green check — you're live.
 
-## Step 5 — Connect your checkout links
+## Step 5 — Gumroad products and checkout links
 
-Once you've created your products on the payment platform (Gumroad /
-Lemon Squeezy — separate quick guide for that), send me the checkout links.
-I'll plug them into the buy buttons and send you the updated folder —
-you drag it into Netlify (see "To update the site later" above) and the
-buttons go live.
+On **gumroad.com**, create three products (New product → Digital product,
+upload the PDFs, set the price):
+
+1. "75 Questions to Ask Before You Buy Cheap Land"
+2. "50 Catches Hidden in Cheap Land Listings"
+3. "The Cheap Land Buyer's Collection" — $29.99, containing all three guides
+   **plus** the Due Diligence Worksheet Pack (the bundle is its own product
+   with all files attached, not a link to the others)
+
+Then copy each product's **share link** (the `.../l/...` URL Gumroad shows on
+the product page) and send me all three. I'll plug them into the buy buttons
+and send you the updated folder — you drag it into Netlify (see "To update
+the site later" above) and the buttons go live.
+
+Tip: in each product's settings, keep "Generate license keys" off, and in
+your Gumroad profile settings set the refund policy to 30 days so it matches
+the site.
 
 ---
 
@@ -86,13 +100,14 @@ buttons go live.
 | Item | Who pays | Cost |
 |---|---|---|
 | Hosting (Netlify) | you | $0 |
-| Domain (GoDaddy) | you | ~$12–20/year |
-| Payment platform | you | % per sale only |
+| Domain (Namecheap) | you | ~$12–20/year |
+| Payments (Gumroad) | you | % per sale only |
 
 ## Troubleshooting
 
 - **Site shows but looks broken** → the folder you dragged must be the one
   that directly contains `index.html` (not a folder containing another folder).
-- **Domain not working after an hour** → in GoDaddy Manage DNS, double-check
-  the A record is exactly `75.2.60.5` and there are no other A records left.
+- **Domain not working after an hour** → in Namecheap Advanced DNS,
+  double-check the A record is exactly `75.2.60.5`, and that the old
+  parking/redirect records from step 4.5 are really gone.
 - **Anything else** → message me a screenshot and I'll sort it out with you.
