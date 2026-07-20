@@ -7,6 +7,11 @@ client's channels; only theme + copy + product change per niche.
 No build step — plain HTML/CSS/JS. Open `index.html` in a browser, or deploy the
 folder as-is to Netlify / Vercel / GitHub Pages.
 
+**Handoff model:** the client hosts, deploys, and pays for everything himself —
+we deliver the files + [LAUNCH-GUIDE.md](LAUNCH-GUIDE.md) (client-facing,
+step-by-step: Netlify drag-and-drop, GoDaddy domain, DNS). Preview for design
+review: https://yt-wizards.github.io/Rick-Site/ (auto-updates on push to main).
+
 ## How to re-skin for a new niche
 
 1. Copy the repo.
