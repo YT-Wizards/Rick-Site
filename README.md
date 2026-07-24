@@ -37,5 +37,7 @@ review: https://yt-wizards.github.io/Rick-Site/ (auto-updates on push to main).
 - [ ] Wire both email forms to the email service (Kit / MailerLite)
 - [ ] Legal entity name in `terms.html` / `privacy.html`
 - [ ] Support email in the footer
-- [ ] Single-guide prices ($14.99) are a draft — confirm with client
-- [ ] Domain + deploy
+- [x] Prices confirmed by client 2026-07-24: singles $14.99, bundle $29.99
+- [ ] Client is writing the three guides — swap in his exact catch-card copy when drafts arrive
+- [ ] Ask client: keep bundle name "The Cheap Land Buyer's Collection" or rename to match the wider lineup?
+- [ ] Domain: frankslandreport.com bought on Namecheap (default DNS still parked) — client connects it per LAUNCH-GUIDE after Netlify deploy

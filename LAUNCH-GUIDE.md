@@ -75,17 +75,19 @@ purposes.)
 
 ## Step 5 — Gumroad products and checkout links
 
-On **gumroad.com**, create three products (New product → Digital product,
+On **gumroad.com**, create four products (New product → Digital product,
 upload the PDFs, set the price):
 
-1. "75 Questions to Ask Before You Buy Cheap Land"
-2. "50 Catches Hidden in Cheap Land Listings"
-3. "The Cheap Land Buyer's Collection" — $29.99, containing all three guides
-   **plus** the Due Diligence Worksheet Pack (the bundle is its own product
-   with all files attached, not a link to the others)
+1. "50 Catches Hidden in Cheap Land Listings" — $14.99 (includes the
+   75-question checklist)
+2. "40 Catches Hidden in Cheap Houses" — $14.99
+3. "The State-by-State Cheap-Living Notebook" — $14.99
+4. The bundle — $29.99, containing all three guides **plus** the Due
+   Diligence Worksheet Pack (the bundle is its own product with all files
+   attached, not a link to the others)
 
 Then copy each product's **share link** (the `.../l/...` URL Gumroad shows on
-the product page) and send me all three. I'll plug them into the buy buttons
+the product page) and send me all four. I'll plug them into the buy buttons
 and send you the updated folder — you drag it into Netlify (see "To update
 the site later" above) and the buttons go live.
 
