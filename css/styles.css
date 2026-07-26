@@ -402,6 +402,17 @@ section { padding: 72px 0; }
   .bundle-cols { grid-template-columns: 1fr; }
 }
 
+.cover-img {
+  width: 156px;
+  margin: 0 auto 20px;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(38, 48, 31, 0.28);
+  display: block;
+}
+
+.cover-img-bundle { width: 210px; }
+
+/* CSS mock covers — fallback for niches that don't have cover art yet */
 .book-cover {
   width: 92px;
   height: 122px;
