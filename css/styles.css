@@ -131,6 +131,19 @@ section { padding: 72px 0; }
 .dark-section .guarantee-note { color: var(--text-cream-muted); }
 
 /* ==========================================================================
+   Launch-promo strip (hidden unless a real deadline is configured in main.js)
+   ========================================================================== */
+.promo-strip {
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 10px 16px;
+}
+
+/* ==========================================================================
    Sticky top bar
    ========================================================================== */
 .topbar {

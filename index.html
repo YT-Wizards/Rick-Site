@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Cheap Land Buyer's Collection — Frank's Land Report</title>
+  <title>The Cheap Living Collection — Frank's Land Report</title>
   <meta name="description" content="50 land catches, 40 house catches, and a state-by-state cheap-living notebook — everything Frank digs out of county records so you know what to ask before you buy cheap.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- Launch-promo strip. Hidden until a REAL deadline is set in js/main.js
+       (PROMO_ENDS_AT). One fixed deadline for everyone, tied to an actual
+       Gumroad discount — never a fake per-visitor timer. -->
+  <div class="promo-strip" id="promo-strip" hidden>
+    ⏳ Launch pricing ends in <strong id="promo-timer">--:--:--</strong>
+  </div>
 
   <!-- Sticky bar (appears on scroll) -->
   <div class="topbar" id="topbar">
@@ -36,8 +43,8 @@
         records so you know exactly what to ask — before you sign anything.
       </p>
 
-      <a class="btn btn-cta" href="#pricing">Get the Cheap Land Buyer's Collection →</a>
-      <div class="guarantee-note">✓ 30-day money-back guarantee · Instant download · Printable PDFs</div>
+      <a class="btn btn-cta" href="#pricing">Get the Cheap Living Collection →</a>
+      <div class="guarantee-note">✓ 7-day money-back guarantee · Instant download · Printable PDFs</div>
 
       <div class="stats-bar">
         <div class="stat">
@@ -91,12 +98,12 @@
         <div class="catch-card">
           <span class="catch-tag">House catch #8</span>
           <h3>The insurance-bill trap</h3>
-          <p>The $20,000 house is real — until the insurer sees the old roof, the wiring, and the flood map. Some cheap houses cost more to insure than to buy.</p>
+          <p>The $20,000 house is real — until the insurer sees the old roof, the wiring, and the flood map. On the coast the real premium can run $500–$1,200 a month while a lender only quotes $150, enough to sink the loan on a "cheap" house.</p>
         </div>
         <div class="catch-card">
           <span class="catch-tag">Relocation catch #3</span>
           <h3>"No income tax" isn't "no taxes"</h3>
-          <p>Some no-income-tax states quietly make it back on property taxes and fees. The move that saves you $4,000 can cost you $5,000 — county by county, it's all on record.</p>
+          <p>Some no-income-tax states quietly make it back on property tax and fees. Texas and New Hampshire have no income tax — and some of the highest property taxes in the country. A middle-income Texan can pay more total tax than a Californian. Weigh income, property, and sales tax together.</p>
         </div>
       </div>
     </div>
@@ -149,9 +156,8 @@
             <li>"Owner financing" traps and land-contract fine print</li>
             <li><strong>Includes the 75-question checklist</strong> — what to ask before you call, before you visit, before you sign</li>
           </ul>
-          <!-- TODO: replace href with real Gumroad link -->
-          <a class="btn btn-cta" href="#" data-checkout="land">Get the Land Guide →</a>
-          <div class="guarantee-note">✓ 30-day money-back guarantee</div>
+          <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-land-catches" data-checkout="land">Get the Land Guide →</a>
+          <div class="guarantee-note">✓ 7-day money-back guarantee</div>
           <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
         </div>
 
@@ -171,9 +177,8 @@
             <li>Mobile-home and title fine print</li>
             <li>What to ask before you even book the inspector</li>
           </ul>
-          <!-- TODO: replace href with real Gumroad link -->
-          <a class="btn btn-cta" href="#" data-checkout="houses">Get the House Guide →</a>
-          <div class="guarantee-note">✓ 30-day money-back guarantee</div>
+          <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-house-catches" data-checkout="houses">Get the House Guide →</a>
+          <div class="guarantee-note">✓ 7-day money-back guarantee</div>
           <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
         </div>
 
@@ -193,9 +198,8 @@
             <li>The towns paying people to move in</li>
             <li>Climate and flood notes worth checking first</li>
           </ul>
-          <!-- TODO: replace href with real Gumroad link -->
-          <a class="btn btn-cta" href="#" data-checkout="notebook">Get the Notebook →</a>
-          <div class="guarantee-note">✓ 30-day money-back guarantee</div>
+          <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-living-notebook" data-checkout="notebook">Get the Notebook →</a>
+          <div class="guarantee-note">✓ 7-day money-back guarantee</div>
           <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
         </div>
 
@@ -211,15 +215,14 @@
               <div class="book-cover"><span class="vol">40</span><span class="vol-label">Houses</span></div>
               <div class="book-cover"><span class="vol">50</span><span class="vol-label">States</span></div>
             </div>
-            <h3>The Cheap Land Buyer's Collection</h3>
+            <h3>The Cheap Living Collection</h3>
             <p class="card-sub">All three guides + the bonus worksheet pack</p>
             <div class="price-line">
               <span class="price">$29.99</span>
               <span class="price-note">$59.96 value · one-time · instant download</span>
             </div>
-            <!-- TODO: replace href with real Gumroad link -->
-            <a class="btn btn-cta" href="#" data-checkout="bundle">Get the Full Collection →</a>
-            <div class="guarantee-note">✓ 30-day money-back guarantee · Instant access</div>
+            <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-living-collection" data-checkout="bundle">Get the Full Collection →</a>
+            <div class="guarantee-note">✓ 7-day money-back guarantee · Instant access</div>
             <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
           </div>
           <div class="bundle-right">
@@ -273,7 +276,7 @@
         <h2 class="section-title">Read It. Use It. Or Get Your Money Back.</h2>
         <p class="section-sub" style="margin: 0 auto;">
           Download the guides, print the checklists, take them to a county office.
-          If within 30 days you don't feel better prepared to look at cheap land,
+          If within 7 days you don't feel better prepared to buy cheap,
           reply to your receipt email and you'll get a full refund. No forms, no questions.
         </p>
       </div>
@@ -308,7 +311,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">What's the refund policy?</button>
-          <div class="faq-a">30 days, full refund, no questions. Reply to your receipt email and it's done.</div>
+          <div class="faq-a">7 days, full refund, no questions. Reply to your receipt email and it's done.</div>
         </div>
       </div>
     </div>
@@ -338,8 +341,8 @@
     <div class="container">
       <div class="eyebrow">One bad parcel costs more than every guide here</div>
       <h2 class="section-title">Know What to Ask — Before You Sign</h2>
-      <a class="btn btn-cta" href="#pricing">Get the Cheap Land Buyer's Collection — $29.99</a>
-      <div class="guarantee-note">✓ 30-day money-back guarantee · Instant download</div>
+      <a class="btn btn-cta" href="#pricing">Get the Cheap Living Collection — $29.99</a>
+      <div class="guarantee-note">✓ 7-day money-back guarantee · Instant download</div>
     </div>
   </section>
 

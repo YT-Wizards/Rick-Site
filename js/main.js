@@ -35,13 +35,36 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.classList.remove('visible');
 });
 
-// Checkout links — placeholder until real checkout URLs are wired in.
-// TODO: remove this handler once data-checkout hrefs point to Gumroad/Lemon Squeezy.
-document.querySelectorAll('[data-checkout]').forEach((a) => {
-  a.addEventListener('click', (e) => {
-    if (a.getAttribute('href') === '#') {
-      e.preventDefault();
-      alert('Checkout link not connected yet (demo mode).');
+// Launch-promo countdown.
+// Set PROMO_ENDS_AT to the real ISO datetime of an actual Gumroad discount
+// deadline (one fixed moment for everyone). Leave null to keep the strip
+// hidden. The strip hides itself automatically once the deadline passes —
+// it never resets per visitor.
+const PROMO_ENDS_AT = null; // e.g. '2026-07-28T23:59:00-05:00'
+
+const promoStrip = document.getElementById('promo-strip');
+const promoTimer = document.getElementById('promo-timer');
+
+if (PROMO_ENDS_AT && promoStrip && promoTimer) {
+  const end = new Date(PROMO_ENDS_AT).getTime();
+
+  const tick = () => {
+    const left = end - Date.now();
+    if (left <= 0) {
+      promoStrip.hidden = true;
+      clearInterval(timerId);
+      return;
     }
-  });
-});
+    const h = Math.floor(left / 3600000);
+    const m = Math.floor((left % 3600000) / 60000);
+    const s = Math.floor((left % 60000) / 1000);
+    promoTimer.textContent =
+      String(h).padStart(2, '0') + ':' +
+      String(m).padStart(2, '0') + ':' +
+      String(s).padStart(2, '0');
+  };
+
+  const timerId = setInterval(tick, 1000);
+  tick();
+  promoStrip.hidden = false;
+}

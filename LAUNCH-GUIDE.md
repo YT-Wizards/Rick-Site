@@ -91,9 +91,9 @@ the product page) and send me all four. I'll plug them into the buy buttons
 and send you the updated folder — you drag it into Netlify (see "To update
 the site later" above) and the buttons go live.
 
-Tip: in each product's settings, keep "Generate license keys" off, and in
-your Gumroad profile settings set the refund policy to 30 days so it matches
-the site.
+Tip: in each product's settings, keep "Generate license keys" off. Your
+Gumroad refund policy is set to 7 days — the site says the same, keep them
+matching if you ever change it.
 
 ---
 
