@@ -1,6 +1,6 @@
 # Frank's Land Report — Sales Page
 
-Single-page sales site for "The Cheap Land Buyer's Collection" ($29.99 ebook bundle),
+Single-page sales site for "The Complete Cheap-Living Field Edition" ($29.99 ebook bundle),
 built as a **re-skinnable template**: the structure is shared across all of the
 client's channels; only theme + copy + product change per niche.
 
