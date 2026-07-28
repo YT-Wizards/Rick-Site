@@ -116,8 +116,14 @@ const PROMO_ENDS_AT = null; // e.g. '2026-07-28T23:59:00-05:00'
 - [ ] **Viewer quotes**: three visibly-marked placeholders in the proof
       section. Swap in real YouTube comments (client to send screenshots
       and confirm permission), keep the attribution line style.
-- [ ] **Terms/Privacy**: `[PLACEHOLDER]` blocks — waiting for the legal
-      name/entity from the client. Refund page is done (7 days).
+- [x] **Terms/Privacy**: written in the name of the brand "Frank's Land
+      Report" (2026-07-27). If the client later wants a personal/LLC name,
+      it's a one-line swap in both files.
+- [ ] **Support email**: the site now uses support@frankslandreport.com
+      (footer + legal pages). The client must create it — easiest is free
+      Email Forwarding in Namecheap (Domain List → Manage → Email
+      Forwarding: support@ → his real inbox), otherwise support mail
+      and refund requests will bounce.
 - [ ] **Countdown date**: waiting for the client's Gumroad discount deadline.
 
 ## 7. Re-skin checklist (new niche = new channel)
