@@ -122,7 +122,9 @@ const PROMO_ENDS_AT = null; // set on launch day, e.g. '2026-07-27T21:00:00-05:0
 - [ ] **Viewer quotes**: three visibly-marked placeholders in the proof
       section. Swap in real YouTube comments (client to send screenshots
       and confirm permission), keep the attribution line style.
-- [ ] **Support email**: the site's contact email is support@frankslandreport.com. In Namecheap open your domain, find Email Forwarding, and forward support@ to your real inbox — it's free and takes a minute. That's where refund requests will land, so worth doing before launch.
+- [x] **Support email**: support@frankslandreport.com forwards to the
+      client's inbox (he set up Namecheap Email Forwarding, confirmed
+      2026-07-28).
 - [ ] **Countdown date**: waiting for the client's Gumroad discount deadline.
 
 ## 7. Re-skin checklist (new niche = new channel)
