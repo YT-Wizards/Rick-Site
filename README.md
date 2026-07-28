@@ -92,14 +92,20 @@ is stable. If the client ever changes a product URL, update the matching
 `js/main.js`, top of the promo section:
 
 ```js
-const PROMO_ENDS_AT = null; // e.g. '2026-07-28T23:59:00-05:00'
+const PROMO_ENDS_AT = null; // set on launch day, e.g. '2026-07-27T21:00:00-05:00'
 ```
 
-- Set it to the **real end datetime of a real Gumroad discount** (offer code
-  the client creates). The gold strip appears at the top of the page,
-  counts down to that one fixed moment for everyone, hits zero once, and
-  hides itself.
-- Leave `null` → strip stays hidden.
+- Agreed launch promo (client, 2026-07-27): bundle at **$24.99** for 7 days
+  from launch, then back to regular **$29.99**. Crossed-out comparison price
+  is the honest **$44.97** (three guides bought separately). The client
+  changes the Gumroad price for the same window and sends the exact end
+  datetime on launch day.
+- Setting `PROMO_ENDS_AT` turns on: the countdown strip, $24.99 on the
+  bundle card / topbar / final CTA, the crossed-out $44.97, and the
+  "Launch price" badge. When the timer hits zero the page reverts to
+  regular $29.99 pricing by itself (`BUNDLE_PRICING` in `js/main.js`
+  holds all the strings).
+- Leave `null` → strip hidden, regular pricing shown.
 - **Policy (agreed with the client 2026-07-26):** no per-visitor resetting
   timers, no fake "people viewing" counters, no invented testimonials.
   Fake urgency risks Gumroad account suspension and FTC action, and the
@@ -108,11 +114,11 @@ const PROMO_ENDS_AT = null; // e.g. '2026-07-28T23:59:00-05:00'
 
 ## 6. Not wired yet / waiting on client
 
-- [ ] **Email forms** (main section + exit modal): both `<form action="#">`.
-      Waiting for the client to pick Kit or MailerLite and create the account.
-      Then: paste the service's form action URL / embed, redeploy.
-      If not ready by launch, consider hiding the email section rather than
-      shipping dead forms.
+- [x] **Email forms**: hidden for launch (client decision 2026-07-27 — no
+      email backend yet). The section has `hidden` in `index.html` and the
+      exit-intent modal is off via `LEAD_MAGNET_ENABLED = false` in
+      `js/main.js`. To re-enable later: flip both and wire the form actions
+      to his email service.
 - [ ] **Viewer quotes**: three visibly-marked placeholders in the proof
       section. Swap in real YouTube comments (client to send screenshots
       and confirm permission), keep the attribution line style.

@@ -446,6 +446,14 @@ section { padding: 72px 0; }
 }
 
 .price-line { margin-bottom: 20px; }
+.price-old {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--text-soft);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
 .price {
   font-family: var(--font-display);
   font-weight: 900;

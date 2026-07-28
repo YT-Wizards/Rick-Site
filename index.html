@@ -23,7 +23,7 @@
   <div class="topbar" id="topbar">
     <div class="topbar-inner">
       <a class="topbar-brand" href="#top">FRANK'S LAND REPORT</a>
-      <a class="btn btn-cta btn-small" href="#pricing">Get the Field Edition — <span class="topbar-price">$29.99</span></a>
+      <a class="btn btn-cta btn-small" href="#pricing">Get the Field Edition — <span class="topbar-price bundle-price-text">$29.99</span></a>
     </div>
   </div>
 
@@ -207,15 +207,16 @@
 
       <!-- Bundle — wide featured card -->
       <div class="bundle-card">
-        <div class="featured-badge">★ Best value — save 50%</div>
+        <div class="featured-badge" id="bundle-badge">★ Best value — save $14.98</div>
         <div class="bundle-cols">
           <div class="bundle-left">
             <img class="cover-img cover-img-bundle" src="assets/covers/bundle.jpg" alt="The Complete Cheap-Living Field Edition — all three guides in one edition">
             <h3>The Complete Cheap-Living Field Edition</h3>
             <p class="card-sub">All three guides + the bonus worksheet pack</p>
             <div class="price-line">
-              <span class="price">$29.99</span>
-              <span class="price-note">$59.96 value · one-time · instant download</span>
+              <span class="price-old" id="bundle-price-old" hidden>$44.97</span>
+              <span class="price" id="bundle-price">$29.99</span>
+              <span class="price-note" id="bundle-price-note">$44.97 if bought separately · one-time · instant download</span>
             </div>
             <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-living-collection" data-checkout="bundle">Get the Full Collection →</a>
             <div class="guarantee-note">✓ 7-day money-back guarantee · Instant access</div>
@@ -313,8 +314,11 @@
     </div>
   </section>
 
-  <!-- ============================ EMAIL CAPTURE ============================ -->
-  <section>
+  <!-- ============================ EMAIL CAPTURE ============================
+       Hidden for launch (client decision 2026-07-27: email backend not ready).
+       To re-enable: remove the `hidden` attribute below and set
+       LEAD_MAGNET_ENABLED = true in js/main.js, then wire the form action. -->
+  <section hidden>
     <div class="container">
       <div class="email-capture">
         <div class="eyebrow">Not ready to buy?</div>
@@ -337,7 +341,7 @@
     <div class="container">
       <div class="eyebrow">One bad parcel costs more than every guide here</div>
       <h2 class="section-title">Know What to Ask — Before You Sign</h2>
-      <a class="btn btn-cta" href="#pricing">Get the Complete Cheap-Living Field Edition — $29.99</a>
+      <a class="btn btn-cta" href="#pricing">Get the Complete Cheap-Living Field Edition — <span class="bundle-price-text">$29.99</span></a>
       <div class="guarantee-note">✓ 7-day money-back guarantee · Instant download</div>
     </div>
   </section>
