@@ -48,7 +48,9 @@ if (LEAD_MAGNET_ENABLED && modal) {
 // the same window). While the promo is live: countdown strip + launch
 // pricing on the bundle. When it ends the page reverts to regular pricing
 // by itself — never a per-visitor timer, never a reset.
-const PROMO_ENDS_AT = null; // set on launch day, e.g. '2026-07-27T21:00:00-05:00'
+// Launch promo confirmed by the client 2026-07-28: ends Aug 4, 11:59pm
+// New York time (EDT). Real Gumroad discount runs for the same window.
+const PROMO_ENDS_AT = '2026-08-04T23:59:00-04:00';
 
 const BUNDLE_PRICING = {
   regular: '$29.99',
