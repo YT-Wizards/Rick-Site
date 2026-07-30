@@ -119,9 +119,8 @@ const PROMO_ENDS_AT = null; // set on launch day, e.g. '2026-07-27T21:00:00-05:0
       exit-intent modal is off via `LEAD_MAGNET_ENABLED = false` in
       `js/main.js`. To re-enable later: flip both and wire the form actions
       to his email service.
-- [ ] **Viewer quotes**: three visibly-marked placeholders in the proof
-      section. Swap in real YouTube comments (client to send screenshots
-      and confirm permission), keep the attribution line style.
+- [x] **Viewer quotes**: three real YouTube comments from the client's
+      screenshots, quoted verbatim (added 2026-07-30).
 - [x] **Support email**: support@frankslandreport.com forwards to the
       client's inbox (he set up Namecheap Email Forwarding, confirmed
       2026-07-28).
