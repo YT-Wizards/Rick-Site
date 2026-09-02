@@ -134,11 +134,11 @@ const PROMO_ENDS_AT = null; // no countdown on the page (client brief 2026-09-02
 - [ ] **Gumroad renames**: the house guide → "Buying a Home Safely", the
       bundle → "The Home Buyer's Secret Files". Names must read identically
       on site, cover, and Gumroad — his own rule.
-- [ ] **"Save 50%" claim**: his brief keeps a *SAVE 50%* banner and his
-      bundle cover carries one, but his own price line says "$29.99 (about
-      $45 separately)", which is about a third off. Asked him to pick:
-      drop the bundle to $22.49, or change the badge to "save $15". The
-      honest badge stays on the page until he answers.
+- [x] **"Save 50%" claim**: settled 2026-09-02. The client keeps the pricing
+      as it is and the badge now reads "Best value — save $15" ($44.97 minus
+      $29.99). **His bundle cover art still carries a SAVE 50% ribbon** — it
+      has to come off before the cover goes on the page, or the site and the
+      cover contradict each other.
 - [x] **Email forms**: hidden for launch (client decision 2026-07-27 — no
       email backend yet). The section has `hidden` in `index.html` and the
       exit-intent modal is off via `LEAD_MAGNET_ENABLED = false` in

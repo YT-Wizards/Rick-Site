@@ -58,7 +58,7 @@ const BUNDLE_PRICING = {
   regular: '$29.99',
   launch: '$24.99',
   separately: '$44.97',
-  regularBadge: '★ Best value — save $14.98',
+  regularBadge: '★ Best value — save $15',
   launchBadge: '★ Launch price — save $19.98',
   regularNote: 'About $45 separately · one-time · instant download · yours forever, no subscription',
   launchNote: 'Launch price — back to $29.99 when the timer ends',
