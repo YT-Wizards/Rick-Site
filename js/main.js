@@ -48,9 +48,11 @@ if (LEAD_MAGNET_ENABLED && modal) {
 // the same window). While the promo is live: countdown strip + launch
 // pricing on the bundle. When it ends the page reverts to regular pricing
 // by itself — never a per-visitor timer, never a reset.
-// Launch promo confirmed by the client 2026-07-28: ends Aug 4, 11:59pm
-// New York time (EDT). Real Gumroad discount runs for the same window.
-const PROMO_ENDS_AT = '2026-08-04T23:59:00-04:00';
+// The launch promo ran 2026-07-28 to 2026-08-04 and is over. Per the client's
+// rebuild brief (2026-09-02) there is no countdown on the page for now, so this
+// stays null. To run another real discount later, set it to the real end
+// datetime of the real Gumroad discount.
+const PROMO_ENDS_AT = null;
 
 const BUNDLE_PRICING = {
   regular: '$29.99',
@@ -58,7 +60,7 @@ const BUNDLE_PRICING = {
   separately: '$44.97',
   regularBadge: '★ Best value — save $14.98',
   launchBadge: '★ Launch price — save $19.98',
-  regularNote: '$44.97 if bought separately · one-time · instant download',
+  regularNote: 'About $45 separately · one-time · instant download · yours forever, no subscription',
   launchNote: 'Launch price — back to $29.99 when the timer ends',
 };
 

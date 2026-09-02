@@ -1,0 +1,7 @@
+# Local tooling — not part of the site the client deploys
+.claude/
+CLAUDE.md
+
+# OS / editor noise
+Thumbs.db
+.DS_Store

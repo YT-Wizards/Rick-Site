@@ -1,6 +1,6 @@
 # Frank's Land Report — Sales Page
 
-Single-page sales site for **"The Complete Cheap-Living Field Edition"**
+Single-page sales site for **"The Home Buyer's Secret Files"**
 ($29.99 ebook bundle) and its three standalone guides, sold via Gumroad.
 Built as a **re-skinnable template**: the structure is shared across all of
 the client's channels; only theme + copy + product change per niche.
@@ -25,27 +25,34 @@ No build step — plain HTML/CSS/JS. Open `index.html` in a browser and it works
 | `assets/avatar.jpg` | Channel avatar (pulled from YouTube) |
 | `assets/banner.jpg` | Channel banner — used as the hero / final-CTA background |
 | `assets/covers/*.jpg` | Real product covers (cropped from the client's art) |
-| `terms.html`, `privacy.html`, `refund.html` | Legal pages (Terms/Privacy still placeholders) |
+| `terms.html`, `privacy.html`, `refund.html` | Legal pages, written under the Frank's Land Report brand |
 | `LAUNCH-GUIDE.md` | **Client-facing** step-by-step: Netlify deploy + Namecheap domain |
 | `README.md` | This file — full team documentation |
 
 ## 2. Page structure (top to bottom)
 
-1. **Promo strip** — launch countdown, hidden until configured (§5)
+Rebuilt 2026-09-02 to the client's brief (`website changes .pdf`), after the
+first version converted badly. All copy in the brief is his and ships verbatim.
+
+1. **Promo strip** — countdown, hidden. No countdown on the page for now (§5)
 2. **Sticky topbar** — appears after scrolling past the hero
-3. **Hero** — headline "The Deal Is Cheap. The Mistakes Aren't.", channel
-   banner behind a forest-green overlay, product stats (50/40/50)
-4. **Catches** — six problem cards: 4 land + 1 house + 1 relocation
+3. **Hero** — headline "Buy the Right Home. Avoid the Costly Mistakes. Keep
+   Your Money.", channel banner behind a forest-green overlay, stats
+   (90+ things to check / 50 states / $0 a month)
+4. **The Real Cost** — six calm room-by-room cards, then the itemised
+   "what one mistake costs" box, closing line, and small print
    (card texts are the client's final copy — don't edit without him)
-5. **Meet Frank** — persona block, "not a realtor, not a lawyer" quote
+5. **Meet Frank** — persona block, "not a realtor, not a lawyer" quote.
+   The client asked for this section to stay untouched; it's the trust anchor
 6. **Pricing** — three single-guide cards ($14.99 each) + wide bundle card
-   ($29.99, "$59.96 value")
-7. **Proof** — viewer quotes. **Still placeholders** — waiting for real
-   comment screenshots from the client. Never invent testimonials.
+   ($29.99, honest "about $45 separately")
+7. **Proof** — three real YouTube comments, quoted verbatim. Never invent
+   testimonials; any sample card must be labelled "SAMPLE — replace before
+   publishing"
 8. **Guarantee** — 7-day money-back (must always match Gumroad's setting)
-9. **FAQ** — includes the "is this advice?" disclaimer answer
+9. **FAQ** — six Q&As from the brief, including the "is this advice?" answer
 10. **Email capture + exit-intent modal** — free "10 questions" lead magnet.
-    **Forms are not wired yet** (§6)
+    **Hidden and not wired** (§6)
 11. **Final CTA** and **footer** with the verbatim educational disclaimer
 
 ## 3. Deploy & domain (what the client does)
@@ -78,42 +85,60 @@ The four buy buttons carry `data-checkout` attributes in `index.html`:
 
 | Button | data-checkout | URL |
 |---|---|---|
-| Land guide | `land` | https://rickscontentforge.gumroad.com/l/cheap-land-catches |
-| House guide | `houses` | https://rickscontentforge.gumroad.com/l/cheap-house-catches |
+| Buying a Home Safely | `safety` | https://rickscontentforge.gumroad.com/l/cheap-house-catches |
+| The Smart-Choices Home Guide | `smart` | **`#` — product doesn't exist yet** |
 | Notebook | `notebook` | https://rickscontentforge.gumroad.com/l/cheap-living-notebook |
 | Bundle | `bundle` | https://rickscontentforge.gumroad.com/l/cheap-living-collection |
 
-The Gumroad slug for the bundle predates the rename — that's fine, the URL
-is stable. If the client ever changes a product URL, update the matching
-`href` and redeploy.
+Gumroad slugs predate the renames — that's fine, the URLs are stable. If the
+client ever changes a product URL, update the matching `href` and redeploy.
+
+The old land guide (`/l/cheap-land-catches`) is **off the page** as of the
+2026-09-02 rebuild — the client dropped it from the lineup. The Gumroad
+product still exists, so old video-description links keep working.
+
+**The site must not be deployed while the Smart-Choices `href` is `#`.**
+A dead buy button on a live sales page is worse than no card at all.
 
 ## 5. Launch-promo countdown (honest urgency only)
 
 `js/main.js`, top of the promo section:
 
 ```js
-const PROMO_ENDS_AT = null; // set on launch day, e.g. '2026-07-27T21:00:00-05:00'
+const PROMO_ENDS_AT = null; // no countdown on the page (client brief 2026-09-02)
 ```
 
-- Agreed launch promo (client, 2026-07-27): bundle at **$24.99** for 7 days
-  from launch, then back to regular **$29.99**. Crossed-out comparison price
-  is the honest **$44.97** (three guides bought separately). The client
-  changes the Gumroad price for the same window and sends the exact end
-  datetime on launch day.
-- Setting `PROMO_ENDS_AT` turns on: the countdown strip, $24.99 on the
+- The launch promo ran 2026-07-28 → 2026-08-04 ($24.99, real Gumroad
+  discount) and expired on its own. The client's rebuild brief says **no
+  launch countdown for now**, so this is back to `null`.
+- Setting `PROMO_ENDS_AT` again turns on: the countdown strip, $24.99 on the
   bundle card / topbar / final CTA, the crossed-out $44.97, and the
   "Launch price" badge. When the timer hits zero the page reverts to
   regular $29.99 pricing by itself (`BUNDLE_PRICING` in `js/main.js`
   holds all the strings).
-- Leave `null` → strip hidden, regular pricing shown.
-- **Policy (agreed with the client 2026-07-26):** no per-visitor resetting
-  timers, no fake "people viewing" counters, no invented testimonials.
-  Fake urgency risks Gumroad account suspension and FTC action, and the
-  brand is built on trust. The client explicitly approved the honest
-  version — don't relitigate this.
+- **Policy (agreed with the client 2026-07-26, restated in his own brief
+  2026-09-02):** no per-visitor resetting timers, no fake "people viewing"
+  counters, no invented testimonials. Fake urgency risks Gumroad account
+  suspension and FTC action, and the brand is built on trust. Real Gumroad
+  purchase popups are fine. Don't relitigate this.
 
 ## 6. Not wired yet / waiting on client
 
+- [ ] **Smart-Choices Home Guide**: the PDF and the cover are still being
+      made, and the Gumroad product doesn't exist. Its buy button is `#`.
+      **Blocks deploy** (§4).
+- [ ] **New cover art**: the client is sending four new covers as image
+      files. Until then, three cards reuse the old artwork and the
+      Smart-Choices card shows the CSS mock cover. See the `COVER ART TODO`
+      comment in `index.html`.
+- [ ] **Gumroad renames**: the house guide → "Buying a Home Safely", the
+      bundle → "The Home Buyer's Secret Files". Names must read identically
+      on site, cover, and Gumroad — his own rule.
+- [ ] **"Save 50%" claim**: his brief keeps a *SAVE 50%* banner and his
+      bundle cover carries one, but his own price line says "$29.99 (about
+      $45 separately)", which is about a third off. Asked him to pick:
+      drop the bundle to $22.49, or change the badge to "save $15". The
+      honest badge stays on the page until he answers.
 - [x] **Email forms**: hidden for launch (client decision 2026-07-27 — no
       email backend yet). The section has `hidden` in `index.html` and the
       exit-intent modal is off via `LEAD_MAGNET_ENABLED = false` in
@@ -124,7 +149,6 @@ const PROMO_ENDS_AT = null; // set on launch day, e.g. '2026-07-27T21:00:00-05:0
 - [x] **Support email**: support@frankslandreport.com forwards to the
       client's inbox (he set up Namecheap Email Forwarding, confirmed
       2026-07-28).
-- [ ] **Countdown date**: waiting for the client's Gumroad discount deadline.
 
 ## 7. Re-skin checklist (new niche = new channel)
 

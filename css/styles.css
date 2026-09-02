@@ -296,6 +296,75 @@ section { padding: 72px 0; }
   margin-bottom: 8px;
 }
 
+/* Itemised "what one mistake costs" box, under the cards */
+.cost-box {
+  max-width: 620px;
+  margin: 44px auto 0;
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  border-top: 4px solid var(--alert);
+  border-radius: var(--radius);
+  padding: 26px 28px 20px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(60, 55, 35, 0.07);
+}
+
+.cost-box-title {
+  font-family: var(--font-record);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cost-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cost-label { font-size: 1rem; color: var(--text-body); }
+
+.cost-amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--alert);
+  white-space: nowrap;
+}
+
+.cost-row-total { border-bottom: none; padding-bottom: 4px; }
+.cost-row-total .cost-label { color: var(--text-dark); font-weight: 600; }
+.cost-row-total .cost-amount { color: var(--green); font-size: 1.5rem; }
+
+.cost-closing {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  max-width: 620px;
+  margin: 22px auto 0;
+}
+
+.cost-smallprint {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  max-width: 620px;
+  margin: 12px auto 0;
+}
+
+@media (max-width: 480px) {
+  .cost-row { flex-direction: column; gap: 2px; }
+  .cost-amount { align-self: flex-start; }
+}
+
 /* ==========================================================================
    Meet Frank — forest green band
    ========================================================================== */
@@ -432,6 +501,11 @@ section { padding: 72px 0; }
 }
 .book-cover .vol { font-size: 1.5rem; font-weight: 900; }
 .book-cover .vol-label { font-family: var(--font-record); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-cream-muted); }
+
+/* Same footprint as .cover-img, for a product whose art hasn't arrived yet */
+.book-cover.cover-placeholder { width: 156px; height: 220px; }
+.book-cover.cover-placeholder .vol { font-size: 2.4rem; }
+.book-cover.cover-placeholder-bundle { width: 210px; height: 280px; }
 
 .book-stack { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
 .book-stack .book-cover { width: 66px; height: 92px; margin: 0; }

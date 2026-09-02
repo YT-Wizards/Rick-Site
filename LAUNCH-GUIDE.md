@@ -78,13 +78,17 @@ purposes.)
 On **gumroad.com**, create four products (New product → Digital product,
 upload the PDFs, set the price):
 
-1. "50 Catches Hidden in Cheap Land Listings" — $14.99 (includes the
-   75-question checklist)
-2. "40 Catches Hidden in Cheap Houses" — $14.99
+1. "Buying a Home Safely" — $14.99 (this is the existing house guide,
+   renamed in Gumroad so the title matches the site and the cover)
+2. "The Smart-Choices Home Guide" — $14.99 (new product)
 3. "The State-by-State Cheap-Living Notebook" — $14.99
-4. The bundle — $29.99, containing all three guides **plus** the Due
-   Diligence Worksheet Pack (the bundle is its own product with all files
-   attached, not a link to the others)
+4. "The Home Buyer's Secret Files" — $29.99, containing all three guides
+   **plus** the Due-Diligence Worksheet Pack (the bundle is its own product
+   with all files attached, not a link to the others)
+
+The product name has to read exactly the same on the site, on the cover, and
+in Gumroad — that's what stops buyers wondering whether they bought the right
+thing.
 
 Then copy each product's **share link** (the `.../l/...` URL Gumroad shows on
 the product page) and send me all four. I'll plug them into the buy buttons
