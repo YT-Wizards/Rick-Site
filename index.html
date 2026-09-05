@@ -164,20 +164,15 @@
       <h2 class="section-title">Choose Your Edition</h2>
       <p class="section-sub">Pick the guide that matches the decision in front of you — buying, kitting out, or choosing where to live. Or get all three plus the worksheet pack for less than the price of two.</p>
 
-      <!-- COVER ART TODO (2026-09-02): the client is sending the new covers as
-           image files. The old artwork for the renamed products contradicts the
-           new titles, so those cards fall back to the CSS mock cover for now.
-           Only the notebook keeps its real cover (its title didn't change).
-           Drop safety.jpg, smart-choices.jpg and bundle.jpg into assets/covers/
-           and swap each .book-cover block back to an <img class="cover-img">. -->
+      <!-- Covers: the client's new flat artwork (received 2026-09-04), trimmed
+           off its cream mount so the CSS shadow does the lifting.
+           TODO: notebook.jpg is still the older 3D mockup — waiting on the
+           notebook cover in the same flat style. -->
       <div class="pricing-grid">
 
         <!-- Card 1 — buying safely (was "40 Catches Hidden in Cheap Houses") -->
         <div class="price-card">
-          <div class="book-cover cover-placeholder">
-            <span class="vol">I</span>
-            <span class="vol-label">Cover coming</span>
-          </div>
+          <img class="cover-img" src="assets/covers/safety.jpg" alt="Buying a Home Safely — book cover">
           <h3>Buying a Home Safely</h3>
           <p class="card-sub">What to check before you buy — so you don't inherit a money pit.</p>
           <div class="price-line">
@@ -190,19 +185,14 @@
             <li>What to ask before you even book the inspector</li>
             <li>The 3-stage checklist: before you offer, before the inspection, before you close</li>
           </ul>
-          <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-house-catches" data-checkout="safety">Get the Safety Guide →</a>
+          <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/buying-a-home-safely" data-checkout="safety">Get the Safety Guide →</a>
           <div class="guarantee-note">✓ 7-day money-back guarantee</div>
           <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
         </div>
 
-        <!-- Card 2 — smart choices (NEW product)
-             TODO before deploy: the client must create this product in Gumroad and
-             send the link. The href below is a placeholder and does nothing. -->
+        <!-- Card 2 — smart choices (NEW product) -->
         <div class="price-card">
-          <div class="book-cover cover-placeholder">
-            <span class="vol">II</span>
-            <span class="vol-label">Cover coming</span>
-          </div>
+          <img class="cover-img" src="assets/covers/smart-choices.jpg" alt="The Smart-Choices Home Guide — book cover">
           <h3>The Smart-Choices Home Guide</h3>
           <p class="card-sub">Kit out every room right — the smart pick, and the mistake to avoid.</p>
           <div class="price-line">
@@ -215,7 +205,7 @@
             <li>Windows, kitchens and cabinets kitted out right for life after 50</li>
             <li>The house shape and upgrades worth the money — and the ones that aren't</li>
           </ul>
-          <a class="btn btn-cta" href="#" data-checkout="smart">Get the Smart-Choices Guide →</a>
+          <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/smart-choices-home-guide" data-checkout="smart">Get the Smart-Choices Guide →</a>
           <div class="guarantee-note">✓ 7-day money-back guarantee</div>
           <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
         </div>
@@ -247,10 +237,7 @@
         <div class="featured-badge" id="bundle-badge">★ Best value — save $15</div>
         <div class="bundle-cols">
           <div class="bundle-left">
-            <div class="book-cover cover-placeholder cover-placeholder-bundle">
-              <span class="vol">★</span>
-              <span class="vol-label">Cover coming</span>
-            </div>
+            <img class="cover-img cover-img-bundle" src="assets/covers/bundle.jpg" alt="The Home Buyer's Secret Files — all three guides in one bundle">
             <h3>The Home Buyer's Secret Files</h3>
             <p class="card-sub">All three guides + the bonus worksheet pack — the whole decision, from what to buy to how to kit it out to where to live.</p>
             <div class="price-line">
@@ -258,7 +245,7 @@
               <span class="price" id="bundle-price">$29.99</span>
               <span class="price-note" id="bundle-price-note">About $45 separately · one-time · instant download · yours forever, no subscription</span>
             </div>
-            <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/cheap-living-collection" data-checkout="bundle">Get the Secret Files — <span class="bundle-price-text">$29.99</span> →</a>
+            <a class="btn btn-cta" href="https://rickscontentforge.gumroad.com/l/home-buyers-secret-files" data-checkout="bundle">Get the Secret Files — <span class="bundle-price-text">$29.99</span> →</a>
             <div class="guarantee-note">✓ 7-day money-back guarantee · Instant access</div>
             <div class="payment-row">🔒 SECURE CHECKOUT · VISA · MASTERCARD · PAYPAL · APPLE PAY</div>
           </div>

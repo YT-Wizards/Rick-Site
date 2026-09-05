@@ -85,20 +85,20 @@ The four buy buttons carry `data-checkout` attributes in `index.html`:
 
 | Button | data-checkout | URL |
 |---|---|---|
-| Buying a Home Safely | `safety` | https://rickscontentforge.gumroad.com/l/cheap-house-catches |
-| The Smart-Choices Home Guide | `smart` | **`#` — product doesn't exist yet** |
+| Buying a Home Safely | `safety` | https://rickscontentforge.gumroad.com/l/buying-a-home-safely |
+| The Smart-Choices Home Guide | `smart` | https://rickscontentforge.gumroad.com/l/smart-choices-home-guide |
 | Notebook | `notebook` | https://rickscontentforge.gumroad.com/l/cheap-living-notebook |
-| Bundle | `bundle` | https://rickscontentforge.gumroad.com/l/cheap-living-collection |
+| Bundle | `bundle` | https://rickscontentforge.gumroad.com/l/home-buyers-secret-files |
 
-Gumroad slugs predate the renames — that's fine, the URLs are stable. If the
-client ever changes a product URL, update the matching `href` and redeploy.
+All four verified 200 on 2026-09-05. If the client ever changes a product
+URL, update the matching `href` and redeploy.
 
-The old land guide (`/l/cheap-land-catches`) is **off the page** as of the
-2026-09-02 rebuild — the client dropped it from the lineup. The Gumroad
-product still exists, so old video-description links keep working.
-
-**The site must not be deployed while the Smart-Choices `href` is `#`.**
-A dead buy button on a live sales page is worse than no card at all.
+**Superseded products still live in Gumroad** — `/l/cheap-house-catches`,
+`/l/cheap-living-collection` and `/l/cheap-land-catches` all still return 200.
+The first two are now duplicates of products on the page under their old
+names, so a buyer arriving from an old video description gets the old title
+and the old files. Worth asking the client to unpublish or repoint them; the
+land guide is deliberately off the page and can stay as it is.
 
 ## 5. Launch-promo countdown (honest urgency only)
 
@@ -124,16 +124,18 @@ const PROMO_ENDS_AT = null; // no countdown on the page (client brief 2026-09-02
 
 ## 6. Not wired yet / waiting on client
 
-- [ ] **Smart-Choices Home Guide**: the PDF and the cover are still being
-      made, and the Gumroad product doesn't exist. Its buy button is `#`.
-      **Blocks deploy** (§4).
-- [ ] **New cover art**: the client is sending four new covers as image
-      files. Until then, three cards reuse the old artwork and the
-      Smart-Choices card shows the CSS mock cover. See the `COVER ART TODO`
-      comment in `index.html`.
-- [ ] **Gumroad renames**: the house guide → "Buying a Home Safely", the
-      bundle → "The Home Buyer's Secret Files". Names must read identically
-      on site, cover, and Gumroad — his own rule.
+- [ ] **Notebook cover**: still the older 3D mockup, while the other three are
+      the new flat artwork. Waiting on the notebook in the same flat style.
+- [ ] **Wide "Secret Files" banner**: the client sent one (1693×929) with no
+      instruction on where it goes. Not in the repo yet — ask him first.
+- [x] **Smart-Choices Home Guide**: Gumroad product live, button wired
+      (2026-09-05).
+- [x] **New cover art**: received 2026-09-04 as PNGs on a cream mount;
+      trimmed to the cover itself and resized into `assets/covers/`
+      (`safety.jpg`, `smart-choices.jpg`, `bundle.jpg`). The trim script is
+      throwaway — re-crop the same way if he sends replacements.
+- [x] **Gumroad renames**: he made new products rather than renaming, so the
+      slugs are clean and the names match the covers.
 - [x] **"Save 50%" claim**: settled 2026-09-02. The client keeps the pricing
       as it is and the badge now reads "Best value — save $15" ($44.97 minus
       $29.99). **His bundle cover art still carries a SAVE 50% ribbon** — it
