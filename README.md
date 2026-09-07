@@ -126,6 +126,17 @@ const PROMO_ENDS_AT = null; // no countdown on the page (client brief 2026-09-02
 
 - [ ] **Wide "Secret Files" banner**: the client sent one (1693×929) with no
       instruction on where it goes. Not in the repo yet — ask him first.
+- [ ] **BLOCKER — two buttons, one product.** `/l/smart-choices-home-guide`
+      302s to `/l/buying-a-home-safely`: they are the same single Gumroad
+      product, titled "Buying a Home Safely" but carrying the Smart-Choices
+      description. So cards 1 and 2 on the page sell the same thing and the
+      real Buying-a-Home-Safely guide has no product at all. The client has to
+      create the missing product and give it its own slug. Checked 2026-09-07.
+- [ ] **Bundle description maths**: the Gumroad listing says "the three run
+      $59.97 … You keep the other half". The singles are $14.99, so it's
+      $44.97 and half off is wrong — the same claim he agreed to drop on the
+      site. His product images (bundle and single) also still carry a
+      SAVE 50% ribbon.
 - [ ] **Superseded Gumroad products**: the client said he'd unpublish
       `/l/cheap-house-catches` and `/l/cheap-living-collection`; both still
       returned 200 on 2026-09-07.

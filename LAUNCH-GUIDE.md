@@ -19,12 +19,12 @@ If you get stuck at any step, message me and we'll walk through it together.
 
 ## Step 1 — Get the site files (2 min)
 
-1. Open the site's GitHub page (I'll send the link).
-2. Click the green **Code** button → **Download ZIP**.
-3. Unzip it. You'll get a folder containing `index.html`, `css`, `js`, `assets` etc.
-   That folder **is** the site.
-
-*(Alternatively I'll just email you the ZIP — same thing.)*
+1. Download the current version:
+   **https://github.com/YT-Wizards/Rick-Site/archive/refs/heads/main.zip**
+   This link always gives you the latest files — bookmark it.
+2. Unzip it. Inside you'll get a folder containing `index.html`, `css`, `js`,
+   `assets` and so on. **That inner folder is the site** — the one that has
+   `index.html` sitting directly in it, not the one wrapped around it.
 
 ## Step 2 — Put the site online with Netlify (10 min)
 
@@ -73,31 +73,33 @@ purposes.)
 9. Netlify will automatically issue the HTTPS certificate (the padlock).
    When the domain shows a green check — you're live.
 
-## Step 5 — Gumroad products and checkout links
+## Step 5 — Gumroad products and checkout links ✓ (already set up)
 
-On **gumroad.com**, create four products (New product → Digital product,
-upload the PDFs, set the price):
+The four buy buttons on the site point at these products:
 
-1. "Buying a Home Safely" — $14.99 (this is the existing house guide,
-   renamed in Gumroad so the title matches the site and the cover)
-2. "The Smart-Choices Home Guide" — $14.99 (new product)
-3. "The State-by-State Cheap-Living Notebook" — $14.99
-4. "The Home Buyer's Secret Files" — $29.99, containing all three guides
-   **plus** the Due-Diligence Worksheet Pack (the bundle is its own product
-   with all files attached, not a link to the others)
+| Button on the site | Price | Gumroad link |
+|---|---|---|
+| Buying a Home Safely | $14.99 | `/l/buying-a-home-safely` |
+| The Smart-Choices Home Guide | $14.99 | `/l/smart-choices-home-guide` |
+| The State-by-State Cheap-Living Notebook | $14.99 | `/l/cheap-living-notebook` |
+| The Home Buyer's Secret Files | $29.99 | `/l/home-buyers-secret-files` |
 
-The product name has to read exactly the same on the site, on the cover, and
-in Gumroad — that's what stops buyers wondering whether they bought the right
-thing.
+All four sit under `rickscontentforge.gumroad.com`. If you ever change a
+product's URL, tell me and I'll repoint the button — a changed slug leaves a
+redirect behind, so the old link keeps working and it's easy to miss that two
+buttons have quietly ended up on the same product.
 
-Then copy each product's **share link** (the `.../l/...` URL Gumroad shows on
-the product page) and send me all four. I'll plug them into the buy buttons
-and send you the updated folder — you drag it into Netlify (see "To update
-the site later" above) and the buttons go live.
+Three things to keep in sync, because the site can't read them from Gumroad:
 
-Tip: in each product's settings, keep "Generate license keys" off. Your
-Gumroad refund policy is set to 7 days — the site says the same, keep them
-matching if you ever change it.
+- **Prices.** The site prints $14.99 and $29.99. Change one in Gumroad and it
+  has to change on the site too.
+- **The comparison figure.** Three guides at $14.99 come to $44.97, so the
+  bundle saves $15. Any "bought separately" number, on the site, on a cover,
+  or in a Gumroad description, has to match that.
+- **The refund window.** 7 days everywhere: your Gumroad setting, the site's
+  guarantee band, the FAQ, and `refund.html`.
+
+Tip: in each product's settings, keep "Generate license keys" off.
 
 ---
 
