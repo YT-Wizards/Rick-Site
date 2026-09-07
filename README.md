@@ -124,16 +124,23 @@ const PROMO_ENDS_AT = null; // no countdown on the page (client brief 2026-09-02
 
 ## 6. Not wired yet / waiting on client
 
-- [ ] **Notebook cover**: still the older 3D mockup, while the other three are
-      the new flat artwork. Waiting on the notebook in the same flat style.
 - [ ] **Wide "Secret Files" banner**: the client sent one (1693×929) with no
       instruction on where it goes. Not in the repo yet — ask him first.
+- [ ] **Superseded Gumroad products**: the client said he'd unpublish
+      `/l/cheap-house-catches` and `/l/cheap-living-collection`; both still
+      returned 200 on 2026-09-07.
+- [x] **Notebook cover**: received 2026-09-07, so all four covers are now his
+      flat artwork in one style.
 - [x] **Smart-Choices Home Guide**: Gumroad product live, button wired
       (2026-09-05).
-- [x] **New cover art**: received 2026-09-04 as PNGs on a cream mount;
-      trimmed to the cover itself and resized into `assets/covers/`
-      (`safety.jpg`, `smart-choices.jpg`, `bundle.jpg`). The trim script is
-      throwaway — re-crop the same way if he sends replacements.
+- [x] **New cover art**: his covers arrive as PNGs mounted on a cream board
+      with a painted drop shadow. Everything outside the cover has to be
+      trimmed off (the card draws its own shadow), then saved at 2× the CSS
+      width: 480px for `safety.jpg` / `smart-choices.jpg` / `notebook.jpg`,
+      640px for `bundle.jpg`. A plain luminance cut doesn't work because the
+      notebook cover is gold — walk in from each edge instead, dropping lines
+      that are still within ~55 of the mount colour, and skip the trim
+      entirely when the corner pixel is dark (the bundle art is full-bleed).
 - [x] **Gumroad renames**: he made new products rather than renaming, so the
       slugs are clean and the names match the covers.
 - [x] **"Save 50%" claim**: settled 2026-09-02. The client keeps the pricing
