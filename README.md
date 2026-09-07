@@ -86,12 +86,15 @@ The four buy buttons carry `data-checkout` attributes in `index.html`:
 | Button | data-checkout | URL |
 |---|---|---|
 | Buying a Home Safely | `safety` | https://rickscontentforge.gumroad.com/l/buying-a-home-safely |
-| The Smart-Choices Home Guide | `smart` | https://rickscontentforge.gumroad.com/l/smart-choices-home-guide |
+| The Smart-Choices Home Guide | `smart` | https://rickscontentforge.gumroad.com/l/Smart-Choices-Home-Guide |
 | Notebook | `notebook` | https://rickscontentforge.gumroad.com/l/cheap-living-notebook |
 | Bundle | `bundle` | https://rickscontentforge.gumroad.com/l/home-buyers-secret-files |
 
-All four verified 200 on 2026-09-05. If the client ever changes a product
-URL, update the matching `href` and redeploy.
+All four verified 2026-09-07: distinct products, right copy, $14.99 / $14.99 /
+$14.99 / $29.99. The Smart-Choices slug is capitalised — the lowercase form
+redirects, so use the capitalised one and skip the hop. If the client ever
+changes a product URL, update the matching `href`, redeploy, and re-check that
+no two buttons land on the same product.
 
 **Superseded products still live in Gumroad** — `/l/cheap-house-catches`,
 `/l/cheap-living-collection` and `/l/cheap-land-catches` all still return 200.
@@ -126,20 +129,23 @@ const PROMO_ENDS_AT = null; // no countdown on the page (client brief 2026-09-02
 
 - [ ] **Wide "Secret Files" banner**: the client sent one (1693×929) with no
       instruction on where it goes. Not in the repo yet — ask him first.
-- [ ] **BLOCKER — two buttons, one product.** `/l/smart-choices-home-guide`
-      302s to `/l/buying-a-home-safely`: they are the same single Gumroad
-      product, titled "Buying a Home Safely" but carrying the Smart-Choices
-      description. So cards 1 and 2 on the page sell the same thing and the
-      real Buying-a-Home-Safely guide has no product at all. The client has to
-      create the missing product and give it its own slug. Checked 2026-09-07.
-- [ ] **Bundle description maths**: the Gumroad listing says "the three run
-      $59.97 … You keep the other half". The singles are $14.99, so it's
-      $44.97 and half off is wrong — the same claim he agreed to drop on the
-      site. His product images (bundle and single) also still carry a
-      SAVE 50% ribbon.
 - [ ] **Superseded Gumroad products**: the client said he'd unpublish
-      `/l/cheap-house-catches` and `/l/cheap-living-collection`; both still
-      returned 200 on 2026-09-07.
+      `/l/cheap-house-catches` ("40 Catches Hidden in Cheap Houses") and
+      `/l/cheap-living-collection` ("The Cheap Living Collection"); both still
+      returned 200 on 2026-09-07, as does `/l/cheap-land-catches`.
+- [ ] **Product name has no hyphen**: Gumroad says "The Smart Choices Home
+      Guide", the site and the cover say "The Smart-Choices Home Guide".
+      Cosmetic, but it's his own read-identically rule.
+- [x] **Two buttons, one product** (found 2026-09-07, fixed by the client the
+      same day). `/l/smart-choices-home-guide` used to 302 to
+      `/l/buying-a-home-safely` — one product wearing the safety title and the
+      Smart-Choices description, so cards 1 and 2 sold the same file. There
+      are now four distinct products, each with the right copy at the right
+      price. Worth re-checking after any slug change: a renamed slug leaves a
+      redirect behind, so two buttons can quietly converge without 404ing.
+- [x] **Bundle description maths**: was "the three run $59.97 … You keep the
+      other half"; now reads "$14.99 × 3 = $44.97 … You save nearly $15" and
+      the banner ribbon says BEST VALUE $15 OFF. Site and store agree.
 - [x] **Notebook cover**: received 2026-09-07, so all four covers are now his
       flat artwork in one style.
 - [x] **Smart-Choices Home Guide**: Gumroad product live, button wired

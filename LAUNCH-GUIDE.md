@@ -80,7 +80,7 @@ The four buy buttons on the site point at these products:
 | Button on the site | Price | Gumroad link |
 |---|---|---|
 | Buying a Home Safely | $14.99 | `/l/buying-a-home-safely` |
-| The Smart-Choices Home Guide | $14.99 | `/l/smart-choices-home-guide` |
+| The Smart-Choices Home Guide | $14.99 | `/l/Smart-Choices-Home-Guide` |
 | The State-by-State Cheap-Living Notebook | $14.99 | `/l/cheap-living-notebook` |
 | The Home Buyer's Secret Files | $29.99 | `/l/home-buyers-secret-files` |
 
